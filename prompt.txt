@@ -1,5 +1,0 @@
-
-flask 기본 앱
-ip로 접속할 수 있게
-@app.route('/') 를 root() 연결하고 index.html  보여주도록 합니다.
-변경된 내용 반영

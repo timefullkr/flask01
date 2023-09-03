@@ -1,18 +1,13 @@
-from flask import Flask, send_from_directory
+from flask import Flask
 
+# Flask 애플리케이션을 생성합니다.
 app = Flask(__name__)
 
-@app.route("/hello")
+# 루트 URL에 대한 라우팅 및 처리 함수를 정의합니다.
+@app.route('/')
 def hello_world():
-    return "Hello, World!"
+    return 'Hello, World!'
 
-@app.route("/")
-def index():
-    return send_from_directory("html","index.html")
-
-@app.route("/<path:name>")
-def page(name):
-    return send_from_directory("html",name)
-
-if __name__ == "__main__":
-    app.run(debug=True)
+# 애플리케이션 실행
+if __name__ == '__main__':
+    app.run()
